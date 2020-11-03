@@ -22,7 +22,7 @@ def index(request):
 
         weather = {
             'city' : city,
-            'temperature' : city_weather['main']['temp'],
+            'temperature' : city_weather['main'][0]['temp'],
             'description' : city_weather['weather'][0]['description'],
             'icon' : city_weather['weather'][0]['icon'],
         }
