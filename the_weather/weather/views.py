@@ -18,11 +18,11 @@ def index(request):
 
     for city in Cities:
 
-        city_weather = requests.get(url.format(city)).json()
+        city_weather = requests.get(url.format(city.name)).json()
 
         weather = {
-            'city' : city,
-            'temperature' : city_weather['main'][0]['temp'],
+            'city' : city.name,
+            'temperature' : city_weather['main']['temp'],
             'description' : city_weather['weather'][0]['description'],
             'icon' : city_weather['weather'][0]['icon'],
         }
