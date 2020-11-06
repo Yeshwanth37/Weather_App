@@ -5,4 +5,4 @@ from .models import City
   
 @admin.register(City)
 class City(admin.ModelAdmin):
-    list_display = ['name']
+     list_display = ['name']
